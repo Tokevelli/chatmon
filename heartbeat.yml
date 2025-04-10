@@ -1,0 +1,10 @@
+heartbeat.monitors:
+- type: http
+  schedule: '@every 10s'
+  urls: ["http://10.8.158.215"]
+  timeout: 10s
+  check.response:
+    status: 200
+
+output.elasticsearch:
+  hosts: ["elasticsearch:9200"]
